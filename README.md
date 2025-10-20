@@ -2,4 +2,5 @@
 
 <h1>Person detection and tracking system</h1>
 <img width="1901" height="336" alt="image" src="https://github.com/user-attachments/assets/39f2fd1d-ca13-4b08-8187-6d333ed9f889" />
-<img width="1901" height="336" alt="image" src="https://drive.google.com/file/d/1DSwllXyRbmS4dvIAsTbU5KhfWG2LGCxQ/view?usp=drive_link" />
+<img width="765" height="923" alt="image" src="https://github.com/user-attachments/assets/de264ef4-941d-40d6-98e4-83592a5acc94" />
+
