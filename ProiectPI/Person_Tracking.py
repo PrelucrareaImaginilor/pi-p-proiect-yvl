@@ -5,11 +5,11 @@ from scipy.spatial.distance import cosine
 from collections import deque
 
 # --- Configuration ---
-MODEL_NAME = "yolov8s.pt"
+MODEL_NAME = "pi-p-proiect-yvl\ProiectPI\yolov8s.pt"
 WEBCAM_ID = 0
 TARGET_CLASS = 0  # detectăm doar persoane
 CONFIDENCE_THRESH = 0.5
-TRACKER_CONFIG_FILE = "memory.yaml"
+TRACKER_CONFIG_FILE = "pi-p-proiect-yvl\ProiectPI\memory.yaml"
 REID_SIMILARITY_THRESH = 0.75  # cât de similare trebuie să fie feature-urile pentru match
 MAX_FRAMES_MISSING = 1000000  # permite re-identificarea chiar și după multe frame-uri
 FEATURE_HISTORY_SIZE = 10  # câte seturi de feature-uri păstrăm per persoană
@@ -287,7 +287,7 @@ class PersonTracking:
 # === Inițializare sistem ===
 reid = PersonTracking(REID_SIMILARITY_THRESH, MAX_FRAMES_MISSING)
 model = YOLO(MODEL_NAME)
-cap = cv2.VideoCapture("test3.mp4")
+cap = cv2.VideoCapture(WEBCAM_ID)
 
 if not cap.isOpened():
     print("Eroare: Video nu poate fi deschis.")
@@ -373,7 +373,8 @@ while True:
     final_frame = np.vstack([info_bg, annotated_frame])
     cv2.imshow("YOLOv8 + ReID Multi-Person", final_frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    key = cv2.waitKey(1) & 0xFF
+    if key == ord('q') or key == ord('Q') or cv2.getWindowProperty("YOLOv8 + ReID Multi-Person", cv2.WND_PROP_VISIBLE) < 1:
         break
 
 cap.release()
