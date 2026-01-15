@@ -295,7 +295,7 @@ class PersonTracking:
 # === Inițializare sistem ===
 reid = PersonTracking(REID_SIMILARITY_THRESH, MAX_FRAMES_MISSING)
 model = YOLO(MODEL_NAME)
-cap = cv2.VideoCapture(os.path.join(SCRIPT_DIR, "peopleWalking.mp4"))
+cap = cv2.VideoCapture(os.path.join(SCRIPT_DIR, "test1.mp4"))
 #cap = cv2.VideoCapture(WEBCAM_ID)
 
 if not cap.isOpened():
@@ -408,4 +408,5 @@ print(f"[*] Similaritate între cadre: {medie_sim_intre_frames:.2f}")
 print(f"[*] IoU mediu: {iou_mediu:.2f}")
 print(f"[*] Scor de încredere : {medie_de_reidentificare:.4f}")
 print("=" * 30)
+
 
