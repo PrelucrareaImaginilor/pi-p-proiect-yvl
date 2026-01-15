@@ -82,7 +82,6 @@ class PersonTracking:
         hist_v = cv2.normalize(hist_v, hist_v).flatten()
 
         # 2. Histograme separate pentru partea de sus și de jos
-        # (útil pentru diferențierea îmbrăcămintei - tricou vs pantaloni)
         h_roi = roi.shape[0]
         top_half = roi[:h_roi // 2, :]
         bottom_half = roi[h_roi // 2:, :]
@@ -408,5 +407,6 @@ print(f"[*] Similaritate între cadre: {medie_sim_intre_frames:.2f}")
 print(f"[*] IoU mediu: {iou_mediu:.2f}")
 print(f"[*] Scor de încredere : {medie_de_reidentificare:.4f}")
 print("=" * 30)
+
 
 
