@@ -1,4 +1,4 @@
-# YOLOv8 Person Re-Identification System
+# YOLOv8 Person detection and tracking system
 
 Sistem de tracking și re-identificare persoane care menține ID-uri permanente chiar și când persoanele ies temporar din cadru sau sunt ocultate.
 
@@ -112,3 +112,4 @@ Pentru fiecare detecție nouă, sistemul:
 - **Factor de încredere vizual** - Similaritate medie între frame-uri consecutive (stabilitate tracking)
 - **mIoU** - Mean Intersection over Union (consistența pozițiilor spațiale)
 - **Re-ID score** - Similaritatea medie la re-identificări (calitatea recuperării după ocultări)
+
