@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/23659151/README.md)
+
 
 
 <h1>Person detection and tracking system</h1> 
