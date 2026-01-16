@@ -51,12 +51,12 @@ WINDOW_HEIGHT = 720                           # Înălțime fereastră afișare
 
 ### Pentru a folosi un video:
 ```python
-cap = cv2.VideoCapture(r"path\to\video.mp4")
+cap = cv2.VideoCapture(os.path.join(SCRIPT_DIR, "video_file_name.mp4"))
 ```
 
 ### Pentru a folosi webcam:
 ```python
-cap = cv2.VideoCapture(0)  
+cap = cv2.VideoCapture(WEBCAM_ID)  
 ```
 
 ## Cum funcționează
@@ -112,4 +112,5 @@ Pentru fiecare detecție nouă, sistemul:
 - **Factor de încredere vizual** - Similaritate medie între frame-uri consecutive (stabilitate tracking)
 - **mIoU** - Mean Intersection over Union (consistența pozițiilor spațiale)
 - **Re-ID score** - Similaritatea medie la re-identificări (calitatea recuperării după ocultări)
+
 
